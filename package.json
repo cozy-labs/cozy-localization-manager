@@ -1,0 +1,39 @@
+{
+  "name": "cozy-localization-manager",
+  "version": "1.0.0",
+  "description": "Localization manager for Cozy applications",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node_modules/.bin/coffee -cb -o dist src/",
+    "build:watch": "node_modules/.bin/coffee -cbw -o dist src/",
+    "test": "NODE_ENV=test mocha test --reporter spec --colors --compilers coffee:coffee-script/register",
+    "test:watch": "npm run test -- --watch --bail --reporter progress",
+    "dev": "npm run build:watch & npm run test:watch",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cozy-labs/cozy-localization-manager.git"
+  },
+  "keywords": [
+    "cozy",
+    "localization"
+  ],
+  "author": "Cozy Cloud <contact@cozycloud.cc>",
+  "license": "AGPL v3",
+  "bugs": {
+    "url": "https://github.com/cozy-labs/cozy-localization-manager/issues"
+  },
+  "homepage": "https://github.com/cozy-labs/cozy-localization-manager",
+  "dependencies": {
+    "cozydb": "0.1.3",
+    "node-polyglot": "0.4.4",
+    "printit": "0.1.13"
+  },
+  "devDependencies": {
+    "chai": "3.4.1",
+    "coffee-script": "1.10.0",
+    "mocha": "2.3.3",
+    "sinon": "1.17.2"
+  }
+}
