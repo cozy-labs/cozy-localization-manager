@@ -97,8 +97,8 @@ module.exports = class LocalizationManager
         if @polyglot?
             # If it has not been defined, automatically add fallback
             # translation.
-            params._ ?= @defaultPolyglot?.t key, params
-            return @polyglot?.t key, params
+            params._ ?= @defaultPolyglot.t key, params
+            return @polyglot.t key, params
 
         else
             logger.error 'Cannot translate because polyglot objects have ' + \
