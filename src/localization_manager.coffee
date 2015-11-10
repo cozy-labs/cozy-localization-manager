@@ -94,17 +94,16 @@ module.exports = class LocalizationManager
     # translation key is not found for current locale.
     t: (key, params = {}) ->
 
-        unless @polyglot? or @defaultPolyglot?
+        if @polyglot?
+            # If it has not been defined, automatically add fallback
+            # translation.
+            params._ ?= @defaultPolyglot?.t key, params
+            return @polyglot?.t key, params
+
+        else
             logger.error 'Cannot translate because polyglot objects have ' + \
                          'not been built.'
             return ''
-        else
-            # If it has not been defined, automatically add fallback
-            # translation.
-            unless params._?
-                params._ = @defaultPolyglot?.t key, params
-
-            return @polyglot?.t key, params
 
 
     # Must be called when the CozyInstance document has changed.
