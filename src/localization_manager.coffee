@@ -103,7 +103,7 @@ module.exports = class LocalizationManager
         else
             logger.error 'Cannot translate because polyglot objects have ' + \
                          'not been built.'
-            return ''
+            return key
 
 
     # Must be called when the CozyInstance document has changed.
