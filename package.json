@@ -20,7 +20,7 @@
     "localization"
   ],
   "author": "Cozy Cloud <contact@cozycloud.cc>",
-  "license": "AGPL v3",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cozy-labs/cozy-localization-manager/issues"
   },
