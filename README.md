@@ -2,13 +2,13 @@
 
 Localization is a key point for application adoption. At Cozy Cloud, we use Polyglot, but developers still have to deal with stuff like getting user's locale from database. The LocalizationManager will help you manage localization on the server.
 
-It's simple as an americano plugin.
+It's simple as an [americano](https://github.com/cozy/americano) plugin.
 
 # Usage
 
 ## Initialization
 ### Americano plugin
-In server/config.[js|coffee]:
+In server/config.{js|coffee}:
 ```coffeescript
     plugins: [
         'cozy-localization-manager'
@@ -36,6 +36,14 @@ manager.t('localization key')
 
 That's it!
 
+## Locales path
+If you use the library as an americano plugin, you need to have your locale files in server/locales/.
+Each file must match the locale name. For instance: en.json, fr.json, de.json.
+
+## Polyglot
+You can find everything about Polyglot (locales format, options) in their [documentation](http://airbnb.io/polyglot.js/).
+
+
 # Development
 
 Clone this repository, install dependencies and run server (it requires Node.js)
@@ -48,7 +56,7 @@ Clone this repository, install dependencies and run server (it requires Node.js)
 
 # What is Cozy?
 
-![Cozy Logo](https://raw.github.com/mycozycloud/cozy-setup/gh-pages/assets/images/happycloud.png)
+![Cozy Logo](https://raw.github.com/cozy/cozy-setup/gh-pages/assets/images/happycloud.png)
 
 [Cozy](http://cozy.io) is a platform that brings all your web services in the
 same private space.  With it, your web apps and your devices can share data
