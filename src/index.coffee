@@ -1,4 +1,4 @@
-LocalizationManager = require './template_localization_manager'
+LocalizationManager = require './localization_manager'
 americanoPluginFactory = require './americano_plugin'
 
 singleton = new LocalizationManager()
