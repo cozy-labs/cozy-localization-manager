@@ -107,4 +107,4 @@ module.exports = class LocalizationManager
 
 
     # Must be called when the CozyInstance document has changed.
-    realtimeCallback: -> @initialize()
+    realtimeCallback: => @initialize(localePath: @localePath)
