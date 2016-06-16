@@ -1,6 +1,6 @@
 {
   "name": "cozy-localization-manager",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Localization manager for Cozy applications",
   "main": "dist/index.js",
   "scripts": {
